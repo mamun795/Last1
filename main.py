@@ -123,17 +123,29 @@ class WebsiteInput(BaseModel):
 
 @app.post("/process_url")
 def process_url(data: WebsiteInput):
-    try:
-        url = data.web
-        global vectore_store
-        vectore_store = get_vectore(url)
+    global vectore_store, conversationnal_chain, chat_History
 
-        global conversationnal_chain
+    try:
+        url = data.web.strip()
+        if not url:
+            return {"error": "No URL provided."}
+
+        # Reset chat and models
+        chat_History = [
+            AIMessage(content="Hello, I am **M795 AI chatbot**. How can I help you?")
+        ]
+        vectore_store = None
+        conversationnal_chain = None
+
+        # Build new vector store
+        vectore_store = get_vectore(url)
         conversationnal_chain = get_conversational_rag_chain(vectore_store)
 
-        return {"message": " Website processed successfully! You can now chat."}
+        return {"success": True, "message": "Website processed successfully! You can now chat."}
+
     except Exception as e:
-        return {"Note": " Website is not correct or could not be loaded."}
+        return {"error": f"Failed to process URL: {str(e)}"}
+
 
 # -----------------------------------------------------
 #  Chat Message Endpoint
