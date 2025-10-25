@@ -1,0 +1,7 @@
+#chat-header { 
+  background:linear-gradient(135deg,#4b6cb7,#182848); 
+  color:white; padding:15px; text-align:center; 
+  font-weight:bold; font-size:18px; flex-shrink:0; cursor:move; user-select:none; 
+}
+#new-url-btn { display:none; margin:5px auto; padding:6px 10px; border:none; border-radius:8px; background:#4b6cb7; color:white; cursor:pointer; flex-shrink:0; }
+#new-url-btn:hover { background:#3556a3; }

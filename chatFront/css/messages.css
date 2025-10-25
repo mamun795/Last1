@@ -1,0 +1,12 @@
+.message {
+  max-width: 82%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  word-wrap: break-word;   /* wrap long words */
+  white-space: pre-wrap;   /* preserve newlines */
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
+.user-msg { align-self:flex-end; background:#4b6cb7; color:white; }
+.bot-msg { align-self:flex-start; background:#e6e6e6; }

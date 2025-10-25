@@ -1,0 +1,4 @@
+#url-section { display:flex; padding:10px; background:#f8f8f8; border-bottom:1px solid #ddd; flex-shrink:0; }
+#url-input { flex:1; padding:6px; border:1px solid #ccc; border-radius:8px; }
+#upload-url-btn { margin-left:5px; padding:6px 10px; border:none; border-radius:8px; background:#4b6cb7; color:white; cursor:pointer; }
+#upload-url-btn:hover { background:#3556a3; }

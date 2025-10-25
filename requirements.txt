@@ -1,0 +1,11 @@
+asyncio
+fastapi
+uvicorn
+langchain_google_genai==1.0.7
+dotenv
+bs4
+faiss-cpu
+pydantic
+langchain==0.2.14
+langchain_community==0.2.11
+langchain_core==0.2.38

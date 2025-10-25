@@ -1,0 +1,21 @@
+#chat-footer {
+  display:flex; padding:10px; background:#f8f8f8; border-top:1px solid #ddd;
+  flex-shrink:0; align-items:flex-end; gap:5px;
+}
+.input-container { flex:1; display:flex; align-items:flex-end; }
+#msg-input {
+  flex:1;  border:1px solid #ccc; border-radius:10px;
+  overflow:hidden; resize:none; min-height:36px; line-height:1.4; font-family:inherit;
+  display: flex;
+  align-items: center;   /* vertically center text */
+  text-align: left;      /* start from left side */   /* small left padding for nice spacing */
+  padding-top:5px; 
+}
+#msg-input:disabled { background:#e0e0e0; cursor:not-allowed; }
+#send-btn {
+  padding:8px 15px; border:none; border-radius:10px;
+  background:#4b6cb7; color:white; cursor:pointer;
+  transition: all 0.2s ease;
+  display:flex; align-items:center; justify-content:center;
+}
+#send-btn:hover { background:#3556a3; }

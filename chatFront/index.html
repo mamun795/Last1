@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M795</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+<div id="chatbot-launcher">💬</div>
+
+<div id="chatbot">
+  <div id="chat-header">M795 AI Chatbot</div>
+  <button id="new-url-btn">Upload New URL</button>
+  <div id="url-section">
+    <input type="text" id="url-input" placeholder="Enter website URL..." />
+    <button id="upload-url-btn">Upload</button>
+  </div>
+  <div id="chat-body">
+    <div id="intro-text">👋Hello! I am <span class="bot-name">M795</span><br>Upload a website URL to start chatting!</div>
+    <div id="typing">Typing...</div>
+  </div>
+  <div id="chat-footer">
+    <div class="input-container">
+      <textarea id="msg-input" placeholder="Type your message..." type="text" disabled></textarea>
+    </div>
+    <button id="send-btn" disabled>Send</button>
+  </div>
+  <div id="footer-note">I can make mistakes. Check important info.</div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+<script type="module">
+  import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+  window.marked = marked;
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+#chatbot {
+  position: fixed; bottom:90px; right:20px;
+  width:350px; height:500px; background:#fff;
+  border-radius:15px; box-shadow:0 6px 25px rgba(0,0,0,0.2);
+  display:none; flex-direction:column; overflow:hidden; z-index:999;
+  resize:both; min-width:250px; min-height:300px; max-width:90vw; max-height:90vh;
+}
+body { margin:0; font-family:Arial,sans-serif; background:#f3f5f9; height:100vh; overflow:hidden; }
