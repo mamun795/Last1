@@ -119,7 +119,7 @@ class WebsiteInput(BaseModel):
 #  Process Website Endpoint
 # -----------------------------------------------------
 
-app.mount("/", StaticFiles(directory="chatFront", html=True), name="chatFront")
+app.mount("/frontend", StaticFiles(directory="chatFront", html=True), name="chatFront")
 
 @app.post("/process_url")
 def process_url(data: WebsiteInput):

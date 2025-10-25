@@ -1,4 +1,4 @@
-const BASE_URL = "https://rag-8at1.onrender.com";
+const BASE_URL = "https://rag-8at1.onrender.com/frontend/";
 // routes.js
 export async function sendUrl(url) {
     try {
