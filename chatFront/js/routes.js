@@ -1,8 +1,8 @@
-const BASE_URL = "https://m795-rag-chatbot.onrender.com";
+const BASE_URL = "https://rag-8at1.onrender.com";
 // routes.js
 export async function sendUrl(url) {
     try {
-        const response = await fetch(`${BACKEND_URL}/process_url`, {
+        const response = await fetch(`${BASE_URL}/process_url`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ web: url })
