@@ -2,7 +2,7 @@ const BASE_URL = "https://m795-rag-chatbot.onrender.com";
 // routes.js
 export async function sendUrl(url) {
     try {
-        const response = await fetch("https://m795-rag-chatbot.onrender.com/process_url", {
+        const response = await fetch(`${BACKEND_URL}/process_url`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ web: url })
