@@ -11,6 +11,8 @@ from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import RedirectResponse
 
 # -----------------------------------------------------
 #  FastAPI setup
@@ -146,7 +148,6 @@ def send_msg1(data: WebsiteInput):
 
     return {"ans": ans}
 
-from fastapi.responses import RedirectResponse
 
 # Serve static frontend files at /frontend
 app.mount("/frontend", StaticFiles(directory="chatFront", html=True), name="chatFront")
