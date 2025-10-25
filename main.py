@@ -11,6 +11,7 @@ from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
+from fastapi.staticfiles import StaticFiles
 
 # -----------------------------------------------------
 #  FastAPI setup
@@ -117,6 +118,8 @@ class WebsiteInput(BaseModel):
 # -----------------------------------------------------
 #  Process Website Endpoint
 # -----------------------------------------------------
+
+app.mount("/", StaticFiles(directory="chatFront", html=True), name="chatFront")
 
 @app.post("/process_url")
 def process_url(data: WebsiteInput):
